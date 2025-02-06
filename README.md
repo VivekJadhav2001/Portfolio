@@ -1,12 +1,12 @@
 # My First Personal Portfolio
-***
+
 
 This is a personal portfolio website built using React, Tailwind CSS, Vite, React Router DOM, Framer Motion, React Icons, locomotive-scroll, gsap.
 
 The website consists of five main sections: Hero, Service/About, Skills, Projects, and Contact.
 
 ## Technologies Used
-***
+
 
 -React: A popular JavaScript library for building user interfaces.
 -Tailwind CSS: A utility-first CSS framework for rapidly styling your application.
@@ -18,7 +18,7 @@ The website consists of five main sections: Hero, Service/About, Skills, Project
 -GSAP: For high-performance animations, creating a seamless and dynamic user experience.
 
 ## Project Structure
-***
+
 
 -The public directory contains static files such as favicon and _redirects file.
 -The src directory contains the main source code for the portfolio website.
@@ -31,10 +31,10 @@ The website consists of five main sections: Hero, Service/About, Skills, Project
 -README.md (the file you are currently reading) provides information about the project.
 
 ## Contact
-***
+
 
 If you have any questions or suggestions, feel free to reach out to me:
 
-Name: Vivek Jadhav
+Name: Vivek Jadhav  
 Email: vivek.jadhav200127@gmail.com
 Portfolio:
