@@ -38,3 +38,9 @@ If you have any questions or suggestions, feel free to reach out to me:
 Name: Vivek Jadhav  
 Email: vivek.jadhav200127@gmail.com
 Portfolio:
+
+
+### Note
+
+
+Currently, this website is best viewed on desktop. A mobile-friendly version will be available soon. Stay tuned!
