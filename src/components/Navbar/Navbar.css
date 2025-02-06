@@ -1,0 +1,24 @@
+/* @font-face {
+    font-family: 'NeueMontreal-Regular';
+    src: url(./NeueMontreal-Regular.ttf) format('truetype');
+}
+
+#font{
+    font-family:'NeueMontreal-Regular' ;
+} */
+
+/* .links a:before{
+    content: '';
+    width: 0;
+    right: 0;
+    bottom: -5px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    transition: width .2s linear;  
+}
+.links a:hover:before{
+    right: initial;
+    left: 0;
+    width: 100%;
+}  */
