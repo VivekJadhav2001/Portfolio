@@ -1,20 +1,35 @@
-import React from 'react'
-import image from '../../assets/about.jpg'
+import React from 'react';
+import image from '../../assets/about.jpg';
+
 function About() {
   return (
-    <div className='w-full py-20 px-20 bg-[#CDEA68] rounded-tl-3xl rounded-tr-3xl text-black'>
-        <h1 className='text-[#212121] text-[3vw] leading-[4.5vw] tracking-tighter'>A passionate frontend developer with a strong foundation built through continuous learning and hands-on experience. I take pride in writing clean, maintainable code and crafting seamless user experiences. Always eager to explore new possibilities, I focus on building intuitive and high-performance web applications.</h1>
-        <div className="flex justify-between w-full border-t-[1px] pt-20 mt-20 border-[#a1b562]">
-            <div className="w-1/2">
-            <h1 className='text-7xl text-[#212121]'>My Approach:</h1>
-            <button className='px-10 py-6 mt-10 bg-zinc-900 rounded-full text-white flex justify-between items-center gap-7 hover:bg-[#FFF] hover:text-[#18181B] '>Read Me
-              <div className="w-2 h-2 bg-zinc-100 rounded-full"></div>
-            </button>
-            </div>
-            <div className="w-1/2 h-[70vh] bg-[#b0c172] rounded-3xl"><img className='w-full h-full rounded-3xl object-cover'src={image} alt="" /></div>
+    <div className="w-full px-6 md:px-20 py-16 bg-[#CDEA68] rounded-tl-3xl rounded-tr-3xl text-black">
+      
+      {/* Intro Text */}
+      <h1 className="text-[#212121] text-xl md:text-[2.5vw] leading-relaxed md:leading-[3.5vw] tracking-tight">
+        A passionate frontend developer with a strong foundation built through continuous learning and hands-on experience. I take pride in writing clean, maintainable code and crafting seamless user experiences. Always eager to explore new possibilities, I focus on building intuitive and high-performance web applications.
+      </h1>
+
+      {/* Content Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center border-t border-[#a1b562] pt-16 mt-16 gap-10">
+
+        {/* Text & Button */}
+        <div className="md:w-1/2 w-full text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl text-[#212121] font-bold">My Approach:</h1>
+          <button className="px-8 py-4 mt-8 bg-zinc-900 text-white rounded-full flex items-center justify-center gap-4 mx-auto md:mx-0 hover:bg-white hover:text-zinc-900 transition">
+            Read Me
+            <div className="w-2 h-2 bg-white rounded-full"></div>
+          </button>
         </div>
+
+        {/* Image */}
+        <div className="md:w-1/2 w-full h-[300px] md:h-[70vh] rounded-3xl overflow-hidden">
+          <img src={image} alt="About" className="w-full h-full object-cover rounded-3xl" />
+        </div>
+
+      </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

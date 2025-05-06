@@ -1,48 +1,48 @@
-import React from 'react'
-import { FaGithub } from "react-icons/fa";
+import React from 'react';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
-import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className=' flex w-full h-[40vh] bg-zinc-900 text-white overflow-hidden'>
-      <div className="w-1/2 mt-2 ml-10 ">
-        <div className=" flex flex-col justify-center items-center w-[25vw] h-[40vh] ">
-          <h1 className='uppercase text-5xl mb-10 font-semibold tracking-tight selection:bg-[#FB2C36]'>Find Me On</h1>
-          <p className='text-2lg mt-3 pb-10'>Feel free to <span className='text-[#FB2C36] font-bold'>connect</span> with me</p>
-          <div className="icons mt-4 flex gap-4 ">
-            <a href='https://github.com/VivekJadhav2001' target='_black'>
-              <FaGithub className='w-[30px] h-[30px] cursor-pointer hover:text-[#FB2C36]' />
+    <footer className="bg-zinc-900 text-white px-6 py-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
+        
+        {/* Social Section */}
+        <div className="text-center md:text-left">
+          <h1 className="text-3xl font-semibold uppercase mb-4 tracking-tight">Find Me On</h1>
+          <p className="mb-4">Feel free to <span className="text-[#FB2C36] font-bold">connect</span> with me</p>
+          <div className="flex justify-center md:justify-start gap-4 text-2xl">
+            <a href="https://github.com/VivekJadhav2001" target="_blank" rel="noreferrer">
+              <FaGithub className="hover:text-[#FB2C36]" />
             </a>
-            <a href='https://x.com/vivekjadha30076' target='_blank'>
-              <BsTwitterX className='w-[30px] h-[30px] cursor-pointer hover:text-[#FB2C36]' />
+            <a href="https://x.com/vivekjadha30076" target="_blank" rel="noreferrer">
+              <BsTwitterX className="hover:text-[#FB2C36]" />
             </a>
-            <a href='https://www.linkedin.com/in/vivek-jadhav-2032ab262/' target='_blank'>
-              <FaLinkedin className='w-[30px] h-[30px] cursor-pointer hover:text-[#FB2C36]' />
+            <a href="https://www.linkedin.com/in/vivek-jadhav-2032ab262/" target="_blank" rel="noreferrer">
+              <FaLinkedin className="hover:text-[#FB2C36]" />
             </a>
-            <a href='https://www.instagram.com/vivek.jadhav200127/?igsh=aGNrMmY2cXc5c2V0#' target='_blank'>
-              <GrInstagram className='w-[30px] h-[30px] cursor-pointer hover:text-[#FB2C36]' />
+            <a href="https://www.instagram.com/vivek.jadhav200127" target="_blank" rel="noreferrer">
+              <GrInstagram className="hover:text-[#FB2C36]" />
             </a>
           </div>
         </div>
-      </div>
-      <div className="w-1/2 mt-2 mr-10 flex justify-center items-center ">
-        <div className="flex flex-col justify-center items-center w-[25vw] h-[40vh] ">
-          <h1 className='uppercase text-5xl mb-7 font-semibold tracking-tight selection:bg-[#FB2C36]'>Contact</h1>
-          <p className='uppercase mb-2 text-[#FB2C36]'>E-mail</p>
-          <p className='cursor-pointer mb-7 selection:bg-[#FB2C36]'>vivek.jadhav200127@gmail.com</p>
-          <p className='uppercase mb-2 text-[#FB2C36]'>address</p>
-          <p className='cursor-pointer selection:bg-[#FB2C36]'>Hyderabad, Telangana, India</p>
-        </div>
-      </div><br/>
 
-      <div className="disclaimer mt-2 mr-10">
-        <p className='pt-[150px]'>**Note: This site is not responsive and this website is best viewed on desktop. A mobile-friendly version will be available soon. Stay tuned!.** </p>
+        {/* Contact Section */}
+        <div className="text-center md:text-left">
+          <h1 className="text-3xl font-semibold uppercase mb-4 tracking-tight">Contact</h1>
+          <div className="mb-4">
+            <p className="uppercase text-[#FB2C36]">E-mail</p>
+            <p>vivek.jadhav200127@gmail.com</p>
+          </div>
+          <div>
+            <p className="uppercase text-[#FB2C36]">Address</p>
+            <p>Hyderabad, Telangana, India</p>
+          </div>
+        </div>
       </div>
-    </div>
-  )
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

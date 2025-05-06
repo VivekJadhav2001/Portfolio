@@ -1,25 +1,38 @@
-import React from 'react'
-import aboutImg from '../../assets/aboutImg.gif'
+import React from 'react';
+import aboutImg from '../../assets/aboutImg.gif';
+
 function About2() {
   return (
-    <div className='w-full h-screen pt-1 flex bg-zinc-900 text-white'>
-        <div className="About_container   mt-38 px-5 sm:px-10 lg:px-20 flex justify-between rounded-2xl bg-[#CDEA68]">
-            <div className="pt-10">
-                <h1 className='text-[#212121] text-7xl font-semibold'>About Me:</h1>
-                <div className=' mt-6 w-full h-screen overflow-hidden '>
-                <img src={aboutImg}  alt="" className=' rounded-4xl h-[55vh] w-[35vw]' />
-                <div>
-            <p className='text-[#212121] text-3xl mt-2.5 tracking-tight'>Im no Batman 🦇 but, I like to code at Night 🌃</p>
-            </div>
-                </div>
-            </div>
-            <div className="h-[70vh] w-[45vw] mr-20 mt-15 overflow-hidden ">
-                <p className='text-[#212121] text-3xl tracking-wide '>My name is VIVEK JADHAV. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving.<br/><br/> I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.</p>
-            
-            </div>
+    <div className="w-full min-h-screen bg-zinc-900 text-white py-10 px-5 sm:px-10 lg:px-40">
+      <div className="bg-[#CDEA68] rounded-2xl p-8 sm:p-12 flex flex-col lg:flex-row gap-10 items-center mt-[10vh]">
+        {/* Left Section */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+          <h1 className="text-[#212121] text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6">
+            About Me:
+          </h1>
+          <img
+            src={aboutImg}
+            alt="About"
+            className="rounded-2xl h-[50vh] w-auto object-cover mb-4"
+          />
+          <p className="text-[#212121] text-xl sm:text-2xl tracking-tight">
+            I’m no Batman 🦇 but, I like to code at Night 🌃
+          </p>
         </div>
+
+        {/* Right Section */}
+        <div className="text-[#212121] text-lg sm:text-xl leading-relaxed max-w-xl">
+          <p>
+            My name is <strong>Vivek Jadhav</strong>. I am a professional and enthusiastic programmer in my daily life. I’m a quick learner with a self-learning attitude. I love to explore new technologies and am passionate about problem-solving.
+          </p>
+          <br />
+          <p>
+            I enjoy working on full-stack web development and aim to make the web more open to the world. My core skill is JavaScript, and I prefer using it across the stack. I'm open to any opportunity that aligns with my skills and interests.
+          </p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default About2
+export default About2;
