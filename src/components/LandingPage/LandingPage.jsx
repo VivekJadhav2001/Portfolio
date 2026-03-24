@@ -11,7 +11,7 @@ function LandingPage() {
   return (
     <div data-scroll data-scroll-section data-scroll-speed="-.3" className='w-full h-screen bg-zinc-900 pt-1'>
       <div className="textstructure mt-48 px-5 sm:px-10 lg:px-20">
-        {["HI There !", "IM Vivek Jadhav", "FrontEnd Developer"].map((item, index) => {
+        {["Hi there!", "I'm Vivek Jadhav", "Full-Stack MERN Developer"].map((item, index) => {
           return (
             <div
               className="masker w-full flex justify-start items-center overflow-hidden"
