@@ -1,47 +1,84 @@
-import React from 'react';
-import project1 from '../../assets/project1.png';
-import project2 from '../../assets/project2.png';
-import { Link } from 'react-router-dom';
+import React from "react";
 
 function Project() {
-    return (
-        <div className="w-full py-20 bg-[#CDEA68]">
-            <div className="w-full px-6 md:px-20 border-b-[2px] border-[#a1b562] pb-8 md:pb-15">
-                <h1 className="text-5xl md:text-7xl tracking-tight text-[#212121]">Projects</h1>
+  const projects = [
+    {
+      title: "AI Resume Builder",
+      img: "https://files.catbox.moe/j3b7bn.png",
+      link: "https://ai-resume-builder-accio.vercel.app/",
+      github: "https://github.com/VivekJadhav2001/AI_Resume_Builder",
+    },
+    {
+      title: "Private Social Media App",
+      img: "https://files.catbox.moe/ugglnh.png",
+      link: "https://private-instagram-phase1.vercel.app/",
+      github: "https://github.com/VivekJadhav2001/Private_Instagram_Phase1",
+    },
+    {
+      title: "Connexa",
+      img: "https://files.catbox.moe/1duy0j.png",
+      link: "https://github.com/VivekJadhav2001/Connexa",
+      github: "https://github.com/VivekJadhav2001/Connexa",
+    },
+    {
+      title: "Finance Dashboard",
+      img: "https://files.catbox.moe/936fl0.png",
+      link: "https://zorvyn-finance-dashboard-sable.vercel.app/",
+      github: "https://github.com/VivekJadhav2001/zorvyn-finance-dashboard",
+    },
+  ];
+
+  return (
+    <div className="w-full py-20 bg-[#CDEA68]">
+      {/* Heading */}
+      <div className="px-6 md:px-20 mb-12">
+        <h1 className="text-5xl md:text-7xl text-[#212121] font-bold">
+          Projects
+        </h1>
+      </div>
+
+      {/* Cards */}
+      <div className="px-6 md:px-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group"
+          >
+            {/* Image */}
+            <div className="h-[220px] md:h-[260px] overflow-hidden">
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+              />
             </div>
-            <div className="px-6 mt-8 md:px-20 ">
-                <div className="flex flex-col md:flex-row gap-6 md:gap-10">
-                    <div className="relative w-full md:w-1/2 h-[40vh] md:h-[70vh]">
-                        <div className="card w-full h-full rounded-lg overflow-hidden">
-                            <p className='text-[#212121] font-extrabold text-2xl mb-[-8vh]'>Expense Tracker</p>
-                            <Link to="https://personal-finance-tracker-0avw.onrender.com/" target="_blank">
-                                <img
-                                    src={project1}
-                                    alt="Expense Tracker"
-                                    className="w-full h-full object-contain cursor-pointer rounded-2xl"
-                                />
-                            </Link>
-                            <Link to="https://personal-finance-tracker-0avw.onrender.com/" target="_blank"><button className="w-[12vw] h-[4vh] bg-red-500 text-white font-bold rounded-2xl cursor-pointer">Live Demo</button></Link>
-                        </div>
-                        {/* <h1 className='absolute left-full z-[9] text-5xl md:text-7xl leading-none -translate-x-1/2 translate-y-1/2 md:translate-y-45 text-[#ceea68]'>FYDEfvasvsav</h1> */}
-                    </div>
-                    <div className="relative w-full md:w-1/2 h-[40vh] md:h-[70vh]">
-                        <div className="card w-full h-full rounded-lg overflow-hidden">
-                            <p className='text-[#212121] font-extrabold text-2xl mb-[-8vh]'>Booking Application</p>
-                            <Link to="https://github.com/VivekJadhav2001/Booking_Application" target='_blank' >
-                                <img
-                                    src={project2}
-                                    alt="Booking Application"
-                                    className="w-full h-full object-contain cursor-pointer rounded-2xl"
-                                />
-                            </Link>
-                            <Link to="https://github.com/VivekJadhav2001/Booking_Application" target="_blank"><button className="w-[12vw] h-[4vh] bg-red-500 text-white font-bold rounded-2xl cursor-pointer">Live Demo</button></Link>
-                        </div>
-                    </div>
-                </div>
+
+            {/* Content */}
+            <div className="p-6 flex flex-col gap-4">
+              <h2 className="text-xl md:text-2xl font-bold text-[#212121]">
+                {project.title}
+              </h2>
+
+              {/* Buttons */}
+              <div className="flex gap-3 flex-wrap">
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  <button className="px-5 py-2 bg-[#212121] text-white rounded-full hover:bg-black active:scale-95 transition cursor-pointer">
+                    Live Demo →
+                  </button>
+                </a>
+
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  <button className="px-5 py-2 border-2 border-[#212121] text-[#212121] rounded-full hover:bg-[#212121] hover:text-white active:scale-95 transition cursor-pointer">
+                    GitHub ↗
+                  </button>
+                </a>
+              </div>
             </div>
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Project;

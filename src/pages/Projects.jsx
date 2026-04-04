@@ -1,41 +1,84 @@
-import React from 'react'
-import project1 from '../assets/project1.png'
-import project2 from '../assets/project2.png'
+import React from "react";
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
+
 function Project() {
+  const projects = [
+    {
+      title: "AI Resume Builder",
+      img: "https://files.catbox.moe/j3b7bn.png",
+      link: "https://ai-resume-builder-accio.vercel.app/",
+      github: "https://github.com/VivekJadhav2001/AI_Resume_Builder",
+    },
+    {
+      title: "Private Social Media App",
+      img: "https://files.catbox.moe/ugglnh.png",
+      link: "https://private-instagram-phase1.vercel.app/",
+      github: "https://github.com/VivekJadhav2001/Private_Instagram_Phase1",
+    },
+    {
+      title: "Connexa",
+      img: "https://files.catbox.moe/1duy0j.png",
+      link: "https://github.com/VivekJadhav2001/Connexa",
+      github: "https://github.com/VivekJadhav2001/Connexa",
+    },
+    {
+      title: "Finance Dashboard",
+      img: "https://files.catbox.moe/936fl0.png",
+      link: "https://zorvyn-finance-dashboard-sable.vercel.app/",
+      github: "https://github.com/VivekJadhav2001/zorvyn-finance-dashboard",
+    },
+  ];
+
   return (
-    <div className='w-full py-25 h-screen bg-[#CDEA68]'>
-      <div className="w-full px-20 border-b-[2px] pt-5 border-[#a1b562] pb-8">
-        <h1 className="text-7xl font-semibold tracking-tight text-[#212121]">Projects</h1>
+    <div className="w-full py-20 bg-[#CDEA68]">
+      {/* Heading */}
+      <div className="w-full px-6 md:px-20 border-b-[2px] border-[#a1b562] pb-8">
+        <h1 className="text-5xl md:text-7xl font-semibold text-[#212121]">
+          Projects
+        </h1>
       </div>
-      <div className="px-20 mt-10 ">
-        <div className="cards w-full flex justify-between gap-10 ">
-          <div className="cardcontainer-appwrite-blogApp relative w-[40vw] h-[40vh] ">
-            {/* <h1 className='absolute left-full  z-[9] text-7xl leading-none -translate-x-1/2 translate-y-45 text-[#ceea68]'>FYDEfvasvsav</h1> */}
-            <a href='https://app-write-blog-ochre.vercel.app/' target='_blank'>
-            <div className=" card w-full h-full border-[3px] border-black rounded-lg overflow-hidden">
-              <img src={project1} alt="" className='w-full h-full bg-cover cursor-pointer' />
-            </div></a>
-            <div className='mt-3.5 text-xl tracking-tighter'>
-              <p>Built with Appwrite, my blog application supports user authentication, including sign-up & login. It enables post management with full CRUD functionality, allowing users to create, edit, and delete posts stored in Appwrite’s database. Role-based access control ensures only authorized users can edit or manage posts. The app features real-time updates, file storage for blog images, search and filtering, and responsive design for a seamless user experience across devices.</p>
-            </div>
-          </div>
-          <div className="cardcontainer-e-commerce-website  relative w-[40vw] h-[40vh]  ">
-            <a target='_blank'>
-            <div className=" card w-full h-full border-[3px] border-black rounded-lg overflow-hidden">
-              {/* <h1 className='absolute right-full  z-[9] text-7xl leading-none translate-x-43 translate-y-45 text-red-500'>{"VISE".split('').map((item,index)=><span className=''>{item}</span>)}</h1> */}
-              <img src={project2} alt="" className='w-full h-full bg-cover  cursor-pointer' />
-            </div>
+
+      {/* Cards */}
+      <div className="px-6 md:px-20 mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group"
+          >
+            {/* Image */}
+            <a href={project.link} target="_blank" rel="noreferrer">
+              <div className="h-[220px] md:h-[260px] overflow-hidden">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300 cursor-pointer"
+                />
+              </div>
             </a>
 
-            <div className='mt-3.5 text-xl tracking-tighter'>
-              <p>I have built a fully functional e-commerce page where users can browse and select products from dedicated Men, Women, and Kids sections. Each product displays both its original price and discounted price for better user engagement. Users can add products to the cart, remove them when needed, and seamlessly navigate between sections.For state management, I utilized Context API, ensuring smooth cart updates and product selection. React Router Toolkit is used for efficient routing between different sections.</p>
+            {/* Content */}
+            <div className="p-6 flex flex-col gap-4">
+              <h2 className="text-xl md:text-2xl font-bold text-[#212121]">
+                {project.title}
+              </h2>
+
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {project.desc}
+              </p>
+
+              {/* Button */}
+              <a href={project.link} target="_blank" rel="noreferrer">
+                <button className="mt-2 px-5 py-2 bg-[#212121] text-white rounded-full hover:bg-black active:scale-95 transition cursor-pointer w-fit">
+                  View Project →
+                </button>
+              </a>
             </div>
           </div>
-
-        </div>
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Project
+export default Project;
