@@ -4,7 +4,24 @@ import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript, IoLogoGithub } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoVercel } from "react-icons/io5";
-import { SiRedux, SiMongodb, SiExpress, SiTypescript, SiPostman } from "react-icons/si";
+import {
+  SiRedux,
+  SiMongodb,
+  SiExpress,
+  SiTypescript,
+  SiPostman,
+  SiNestjs,
+  SiJsonwebtokens,
+  SiAmazons3,
+  // SiGroq,
+  SiMeta,
+  SiOpenai,
+  SiClaude,
+} from "react-icons/si";
+import { TbBrain, TbSparkles } from "react-icons/tb";
+import { TbApi } from "react-icons/tb";
+import { FaCompass } from "react-icons/fa6";
+import { FiUploadCloud } from "react-icons/fi";
 
 const skillGroups = [
   {
@@ -17,6 +34,7 @@ const skillGroups = [
       { icon: <FaReact />, name: "React", color: "#61DAFB" },
       { icon: <SiRedux />, name: "Redux", color: "#764ABC" },
       { icon: <RiTailwindCssFill />, name: "Tailwind", color: "#38BDF8" },
+      { icon: <span>🐻</span>, name: "Zustand", color: "#000000" },
     ],
   },
   {
@@ -25,6 +43,21 @@ const skillGroups = [
       { icon: <FaNodeJs />, name: "Node.js", color: "#339933" },
       { icon: <SiExpress />, name: "Express", color: "#FFFFFF" },
       { icon: <SiMongodb />, name: "MongoDB", color: "#47A248" },
+      { icon: <SiNestjs />, name: "NestJS", color: "#E0234E" },
+      { icon: <SiJsonwebtokens />, name: "JWT", color: "#FB015B" },
+      { icon: <TbApi />, name: "REST", color: "#38BDF8" },
+      { icon: <SiAmazons3 />, name: "AWS S3", color: "#569A31" },
+      { icon: <FiUploadCloud />, name: "Multer", color: "#FFFFFF" },
+    ],
+  },
+  {
+    label: "AI",
+    skills: [
+      { icon: <SiClaude />, name: "Claude AI", color: "#D97757" },
+      { icon: <SiMeta />, name: "LLaMA 3.1", color: "#0668E1" },
+      { icon: <SiOpenai />, name: "OpenAI API", color: "#FFFFFF" },
+      { icon: <TbBrain />, name: "Prompt Engineering", color: "#A78BFA" },
+      { icon: <TbSparkles />, name: "AI Integration", color: "#F0ABFC" },
     ],
   },
   {
@@ -33,6 +66,7 @@ const skillGroups = [
       { icon: <IoLogoGithub />, name: "GitHub", color: "#FFFFFF" },
       { icon: <IoLogoVercel />, name: "Vercel", color: "#FFFFFF" },
       { icon: <SiPostman />, name: "Postman", color: "#FF6C37" },
+      { icon: <SiMongodb />, name: "MongoDB Compass", color: "#569A31" },
     ],
   },
 ];
@@ -59,8 +93,8 @@ function SkillsGrid() {
 
         {/* Description */}
         <p className="text-lg md:text-xl text-[#212121] mb-10 max-w-4xl">
-          Self-taught and project-tested — I've built full-stack apps end to
-          end with this stack, from payment integrations to AI-powered tools.
+          Self-taught and project-tested — I've built full-stack apps end to end
+          with this stack, from payment integrations to AI-powered tools.
         </p>
 
         {/* Grouped Skills */}
