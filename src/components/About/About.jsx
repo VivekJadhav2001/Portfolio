@@ -7,7 +7,7 @@ function About() {
       
       {/* Intro Text */}
       <h1 className="text-[#212121] text-xl md:text-[2.5vw] leading-relaxed md:leading-[3.5vw] tracking-tight">
-        A passionate frontend developer with a strong foundation built through continuous learning and hands-on experience. I take pride in writing clean, maintainable code and crafting seamless user experiences. Always eager to explore new possibilities, I focus on building intuitive and high-performance web applications.
+        I'm a full-stack developer working primarily in the MERN stack, with a habit of picking projects that force me to learn something new — payment gateways, RBAC systems, AI integrations, cloud deployments. I like the craft side of frontend work (clean UI, thoughtful UX) as much as the plumbing side (auth, APIs, databases), and I'm most in my element when a project needs both.
       </h1>
 
       {/* Content Section */}

@@ -19,7 +19,7 @@ function Footer() {
             <a href="https://x.com/vivekjadha30076" target="_blank" rel="noreferrer">
               <BsTwitterX className="hover:text-[#FB2C36]" />
             </a>
-            <a href="https://www.linkedin.com/in/vivek-jadhav-2032ab262/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/vivek-jadhav27" target="_blank" rel="noreferrer">
               <FaLinkedin className="hover:text-[#FB2C36]" />
             </a>
             <a href="https://www.instagram.com/vivek.jadhav200127" target="_blank" rel="noreferrer">
