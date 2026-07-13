@@ -1,46 +1,119 @@
-# My First Personal Portfolio
+# Vivek Jadhav Portfolio
 
-
-This is a personal portfolio website built using React, Tailwind CSS, Vite, React Router DOM, Framer Motion, React Icons, locomotive-scroll, gsap.
-
-The website consists of five main sections: Hero, Service/About, Skills, Projects, and Contact.
-
-## Technologies Used
-
-
--React: A popular JavaScript library for building user interfaces.
--Tailwind CSS: A utility-first CSS framework for rapidly styling your application.
--Vite: A fast build tool for modern web development.
--React Router DOM: A routing library for React applications.
--Framer Motion: A production-ready motion library for React.
--React Icons: A collection of icons for React applications.
--Locomotive Scroll: For smooth, inertia-based scrolling.
--GSAP: For high-performance animations, creating a seamless and dynamic user experience.
-
-## Project Structure
-
-
--The public directory contains static files such as favicon and _redirects file.
--The src directory contains the main source code for the portfolio website.
--The components directory contains reusable components and sections of the website.
--The pages directory contains individual pages of the website.
--App.js is the entry point of the application.
--index.js is the main JavaScript file that renders the application.
--.gitignore specifies files and directories that should be ignored by Git.
--package.json contains information about the project and its dependencies.
--README.md (the file you are currently reading) provides information about the project.
+A modern personal portfolio for **Vivek Jadhav**, a full-stack MERN developer. The site highlights profile information, skills, selected projects, resume access, and contact links in a polished React experience.
 
 ## Contact
 
+The contact section is intentionally kept easy to find for visitors.
 
-If you have any questions or suggestions, feel free to reach out to me:
+- **Email:** [vivek.jadhav200127@gmail.com](mailto:vivek.jadhav200127@gmail.com)
+- **Location:** Hyderabad, Telangana, India
+- **GitHub:** [github.com/VivekJadhav2001](https://github.com/VivekJadhav2001)
+- **LinkedIn:** [linkedin.com/in/vivek-jadhav27](https://www.linkedin.com/in/vivek-jadhav27)
+- **X:** [x.com/vivekjadha30076](https://x.com/vivekjadha30076)
+- **Instagram:** [instagram.com/vivek.jadhav200127](https://www.instagram.com/vivek.jadhav200127)
 
-Name: Vivek Jadhav  
-Email: vivek.jadhav200127@gmail.com
-Portfolio:
+## Overview
 
+This portfolio is built as a fast, animated single-page React application with route-based sections for:
 
-### Note
+- **Home:** Intro, availability badge, GitHub link, and resume link.
+- **About:** Background, current focus, and full-stack development profile.
+- **Skills:** Scrolling technology showcase for frontend, backend, tooling, and deployment skills.
+- **Projects:** Featured projects with live demo and GitHub links.
+- **Contact:** Footer section with email, location, and social profiles.
 
+## Featured Projects
 
-Currently, this website is best viewed on desktop. A mobile-friendly version will be available soon. Stay tuned!
+| Project | Live Demo | Source Code |
+| --- | --- | --- |
+| AI Resume Builder | [View Demo](https://ai-resume-builder-accio.vercel.app/) | [GitHub](https://github.com/VivekJadhav2001/AI_Resume_Builder) |
+| Private Social Media App | [View Demo](https://private-instagram-phase1.vercel.app/) | [GitHub](https://github.com/VivekJadhav2001/Private_Instagram_Phase1) |
+| Connexa | [View Project](https://github.com/VivekJadhav2001/Connexa) | [GitHub](https://github.com/VivekJadhav2001/Connexa) |
+| Finance Dashboard | [View Demo](https://zorvyn-finance-dashboard-sable.vercel.app/) | [GitHub](https://github.com/VivekJadhav2001/zorvyn-finance-dashboard) |
+
+## Tech Stack
+
+- **Frontend:** React 18, Vite, React Router
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion, GSAP, Locomotive Scroll
+- **Icons:** React Icons
+- **Deployment:** Vercel
+- **Code Quality:** ESLint
+
+## Getting Started
+
+### Prerequisites
+
+Install [Node.js](https://nodejs.org/) before running the project locally.
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Production Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+.
+|-- public/
+|   |-- vite.svg
+|-- src/
+|   |-- assets/
+|   |-- components/
+|   |   |-- About/
+|   |   |-- About2/
+|   |   |-- Eyes/
+|   |   |-- Footer/
+|   |   |-- Home/
+|   |   |-- LandingPage/
+|   |   |-- Marquee/
+|   |   |-- Navbar/
+|   |   |-- Projects/
+|   |   |-- Skills/
+|   |   |-- The Code Alchemist/
+|   |-- pages/
+|   |-- App.jsx
+|   |-- Layout.jsx
+|   |-- main.jsx
+|-- index.html
+|-- package.json
+|-- vite.config.js
+|-- vercel.json
+```
+
+## Deployment Notes
+
+The project includes `vercel.json` rewrites so React Router routes work correctly after deployment on Vercel.
+
+## Contact
+
+Want to discuss an opportunity, project, or collaboration?
+
+Email **[vivek.jadhav200127@gmail.com](mailto:vivek.jadhav200127@gmail.com)** or connect through **[LinkedIn](https://www.linkedin.com/in/vivek-jadhav27)**.
+
