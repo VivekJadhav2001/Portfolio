@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import aboutImg from '../../assets/aboutImg.gif';
+import portfolioData from '../../data/portfolioData';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -12,6 +11,9 @@ const fadeUp = {
 };
 
 function About2() {
+  const { aboutPage, personal } = portfolioData;
+  const { bio } = aboutPage;
+
   return (
     <div className="w-full min-h-screen bg-zinc-900 text-white py-10 px-5 sm:px-10 lg:px-40">
       <motion.div
@@ -31,20 +33,20 @@ function About2() {
           className="flex flex-col items-center lg:items-start text-center lg:text-left"
         >
           <h1 className="text-[#212121] text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6">
-            About Me
+            {aboutPage.heading}
           </h1>
           <div className="relative">
             <img
-              src={aboutImg}
-              alt="Vivek coding"
+              src={aboutPage.image.src}
+              alt={aboutPage.image.alt}
               className="rounded-2xl h-[50vh] w-auto object-cover mb-4 shadow-xl"
             />
             <span className="absolute -top-3 -right-3 bg-[#212121] text-[#CDEA68] text-xs font-medium px-3 py-1 rounded-full rotate-3">
-              open to work
+              {aboutPage.badge}
             </span>
           </div>
           <p className="text-[#212121] text-xl sm:text-2xl tracking-tight">
-            I'm no Batman 🦇 but I like to code at night 🌃
+            {aboutPage.quote}
           </p>
         </motion.div>
 
@@ -58,33 +60,21 @@ function About2() {
           className="text-[#212121] text-lg sm:text-xl leading-relaxed max-w-xl"
         >
           <p>
-            I'm <strong>Vivek Jadhav</strong>, a MERN stack developer who likes turning
-            hard problems into shipped products. Recent builds include a placement platform
-            with a full Razorpay payment flow and mock-interview scoring, an AI resume
-            builder, and a role-based social platform with JWT auth and S3 uploads.
+            {bio.beforeName}
+            <strong>{personal.name}</strong>
+            {bio.afterName}
           </p>
           <br />
-          <p>
-            JavaScript is home base — React and Redux on the frontend, Node and MongoDB
-            on the backend — but I'm just as happy debugging a race condition at midnight
-            as I am polishing a UI at noon. Currently looking for a frontend or full-stack
-            role where I can keep building things people actually use.
-          </p>
+          <p>{bio.second}</p>
 
           {/* Quick stats row for scannability */}
           <div className="flex gap-8 mt-8 flex-wrap">
-            <div>
-              <p className="text-3xl font-bold text-[#212121]">5+</p>
-              <p className="text-sm text-[#212121]/70">Full-stack projects shipped</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-[#212121]">MERN</p>
-              <p className="text-sm text-[#212121]/70">Primary stack</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-[#212121]">∞</p>
-              <p className="text-sm text-[#212121]/70">Coffee-to-code ratio</p>
-            </div>
+            {aboutPage.stats.map((stat) => (
+              <div key={stat.label}>
+                <p className="text-3xl font-bold text-[#212121]">{stat.value}</p>
+                <p className="text-sm text-[#212121]/70">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </motion.div>

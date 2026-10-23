@@ -1,7 +1,8 @@
-import React from "react";
+import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { FaArrowUpLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import portfolioData from "../../data/portfolioData";
 
 const lineVariants = {
   hidden: {
@@ -19,19 +20,20 @@ const lineVariants = {
 };
 
 function LandingPage() {
-  const heroLines = ["Hi there!", "I'm Vivek Jadhav", "Software Developer"];
+  const { hero, personal } = portfolioData;
+  const heroLines = hero.lines;
 
   return (
     <div
       data-scroll
       data-scroll-section
       data-scroll-speed="-.3"
-      className="relative w-full min-h-screen bg-zinc-900 pt-1 overflow-hidden"
+      className="relative w-full min-h-[100svh] bg-zinc-900 pt-1 pb-12 sm:pb-16 overflow-hidden"
     >
       {/* Ambient Glow */}
-      <div className="pointer-events-none absolute top-[20%] left-[45%] -translate-x-1/2 w-[55vw] h-[55vw] bg-red-500/10 rounded-full blur-[150px]" />
+      <div className="pointer-events-none absolute top-[20%] left-[45%] -translate-x-1/2 w-[80vw] h-[80vw] sm:w-[55vw] sm:h-[55vw] max-w-[900px] max-h-[900px] bg-red-500/10 rounded-full blur-[110px] sm:blur-[150px]" />
 
-      <div className="pointer-events-none absolute right-0 top-[15%] w-[35vw] h-[35vw] bg-red-500/5 rounded-full blur-[120px]" />
+      <div className="pointer-events-none absolute right-0 top-[15%] w-[55vw] h-[55vw] sm:w-[35vw] sm:h-[35vw] max-w-[560px] max-h-[560px] bg-red-500/5 rounded-full blur-[90px] sm:blur-[120px]" />
 
       {/* Grid */}
       <div
@@ -39,7 +41,8 @@ function LandingPage() {
           pointer-events-none 
           absolute inset-0
           bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)]
-          bg-[size:64px_64px]
+          bg-[size:40px_40px]
+          sm:bg-[size:64px_64px]
         "
       />
 
@@ -52,16 +55,16 @@ function LandingPage() {
           relative z-10
           flex justify-center sm:justify-start
           px-5 sm:px-10 lg:px-20
-          pt-10
+          pt-24 sm:pt-28 lg:pt-32
         "
       >
         <div
           className="
             flex items-center gap-2
-            px-5 py-2
+            px-4 sm:px-5 py-1.5 sm:py-2
             border border-zinc-700
             rounded-full
-            text-xs sm:text-sm
+            text-[10px] sm:text-xs md:text-sm
             uppercase
             tracking-widest
             text-zinc-300
@@ -71,7 +74,7 @@ function LandingPage() {
             <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
           </span>
-          Available for work
+          {personal.availability}
         </div>
       </motion.div>
 
@@ -79,17 +82,16 @@ function LandingPage() {
       <div
         className="
           relative z-10
-          mt-12 sm:mt-16 lg:mt-20
+          mt-8 sm:mt-12 lg:mt-20
           px-5 sm:px-10 lg:px-20
           flex flex-col
           lg:flex-row
           lg:items-center
-          gap-12
-          lg:gap-16
+          gap-10 sm:gap-12 lg:gap-16
         "
       >
         {/* LEFT CONTENT */}
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 w-full">
           {/* Main Heading */}
           <div className="space-y-0">
             {heroLines.map((item, index) => (
@@ -99,16 +101,16 @@ function LandingPage() {
                   {index === 2 && (
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={{ width: "clamp(45px, 6vw, 90px)" }}
+                      animate={{ width: "clamp(36px, 6vw, 90px)" }}
                       transition={{
                         duration: 1,
                         delay: 0.6,
                         ease: [0.76, 0, 0.24, 1],
                       }}
                       className="
-      mr-[1.5vw]
-      mt-[5px]
-      h-[clamp(35px,3.5vw,65px)]
+      mr-2 sm:mr-3 lg:mr-[1.5vw]
+      mt-1
+      h-[clamp(30px,3.5vw,65px)]
       bg-red-500
       rounded-md
       shrink-0
@@ -124,8 +126,8 @@ function LandingPage() {
                       animate="visible"
                       className="
             uppercase
-            text-[10vw]
-            sm:text-[7vw]
+            text-[clamp(1.55rem,8vw,2.75rem)]
+            sm:text-[clamp(2.35rem,6.5vw,3.25rem)]
             lg:text-[clamp(48px,3.8vw,78px)]
             leading-[0.95]
             tracking-[-0.045em]
@@ -150,7 +152,7 @@ function LandingPage() {
               delay: 1,
               duration: 0.8,
             }}
-            className="mt-10 max-w-2xl"
+            className="mt-8 sm:mt-10 max-w-2xl"
           >
             <p
               className="
@@ -162,13 +164,12 @@ function LandingPage() {
                 font-light
               "
             >
-              I build full-stack products end to end — from polished interfaces
-              and scalable APIs to payment flows and AI-powered applications.
+              {hero.intro.primary}
             </p>
 
             <p
               className="
-                mt-4
+                mt-3 sm:mt-4
                 text-zinc-500
                 text-sm
                 sm:text-base
@@ -177,9 +178,7 @@ function LandingPage() {
                 max-w-xl
               "
             >
-              I enjoy turning complex ideas into simple, useful, and interactive
-              digital experiences with a strong focus on clean architecture and
-              thoughtful UI.
+              {hero.intro.secondary}
             </p>
           </motion.div>
 
@@ -192,31 +191,23 @@ function LandingPage() {
               duration: 0.8,
             }}
             className="
-              mt-7
+              mt-6 sm:mt-7
               flex flex-wrap
               items-center
-              gap-x-5
+              gap-x-3 sm:gap-x-5
               gap-y-2
-              text-xs
-              sm:text-sm
+              text-[10px] sm:text-xs md:text-sm
               uppercase
               tracking-widest
               text-zinc-500
             "
           >
-            <span className="text-zinc-300">React</span>
-            <span>•</span>
-
-            <span className="text-zinc-300">Node.js</span>
-            <span>•</span>
-
-            <span className="text-zinc-300">Next.js</span>
-            <span>•</span>
-
-            <span className="text-zinc-300">MongoDB</span>
-            <span>•</span>
-
-            <span className="text-zinc-300">AI</span>
+            {hero.techStack.map((tech, index) => (
+              <Fragment key={tech}>
+                <span className="text-zinc-300">{tech}</span>
+                {index < hero.techStack.length - 1 && <span>•</span>}
+              </Fragment>
+            ))}
           </motion.div>
 
           {/* Buttons */}
@@ -228,18 +219,23 @@ function LandingPage() {
               duration: 0.8,
             }}
             className="
-              mt-9
+              mt-8 sm:mt-9
               flex
+              flex-col sm:flex-row
               flex-wrap
-              gap-4
+              gap-3 sm:gap-4
             "
           >
             {/* Projects */}
             <Link
-              to="/projects"
+              to={hero.actions.projects.to}
               className="
                 relative
-                px-7
+                inline-flex
+                items-center
+                justify-center
+                w-full sm:w-auto
+                px-6 sm:px-7
                 py-3
                 border-2
                 border-red-500
@@ -248,25 +244,33 @@ function LandingPage() {
                 rounded-full
                 overflow-hidden
                 group
+                active:scale-95
+                transition-transform
               "
             >
-              <span className="relative z-10 font-medium">View Projects</span>
+              <span className="relative z-10 text-sm sm:text-base font-medium">{hero.actions.projects.label}</span>
             </Link>
 
             {/* GitHub */}
             <a
-              href="https://github.com/VivekJadhav2001"
+              href={hero.actions.github.href}
               target="_blank"
               rel="noreferrer"
               className="
                 relative
-                px-7
+                inline-flex
+                items-center
+                justify-center
+                w-full sm:w-auto
+                px-6 sm:px-7
                 py-3
                 border-2
                 border-zinc-600
                 rounded-full
                 overflow-hidden
                 group
+                active:scale-95
+                transition-transform
               "
             >
               <span
@@ -284,32 +288,38 @@ function LandingPage() {
               <span
                 className="
                   relative z-10
+                  text-sm sm:text-base
+                  font-medium
                   text-white
                   group-hover:text-black
                   transition-colors
                 "
               >
-                GitHub
+                {hero.actions.github.label}
               </span>
             </a>
 
             {/* Resume */}
             <a
-              href="https://drive.google.com/drive/folders/1WlR2FsCbW1I5d33l73JjiLzubXI_k-Dc?usp=drive_link"
+              href={hero.actions.resume.href}
               target="_blank"
               rel="noreferrer"
               className="
                 relative
                 flex
                 items-center
+                justify-center
+                w-full sm:w-auto
                 gap-3
-                px-7
+                px-6 sm:px-7
                 py-3
                 border-2
                 border-zinc-600
                 rounded-full
                 overflow-hidden
                 group
+                active:scale-95
+                transition-transform
               "
             >
               <span
@@ -327,12 +337,14 @@ function LandingPage() {
               <span
                 className="
                   relative z-10
+                  text-sm sm:text-base
+                  font-medium
                   text-white
                   group-hover:text-black
                   transition-colors
                 "
               >
-                Resume
+                {hero.actions.resume.label}
               </span>
 
               <span
@@ -371,8 +383,9 @@ function LandingPage() {
           className="
             relative
             w-full
-            max-w-md
+            max-w-[18rem] sm:max-w-xs md:max-w-sm
             mx-auto
+            mt-2 lg:mt-0
             lg:mx-0
             lg:w-[34vw]
             xl:w-[36vw]
@@ -405,8 +418,8 @@ function LandingPage() {
             "
           >
             <img
-              src="./profileImage.png"
-              alt="Vivek Jadhav"
+              src={hero.image.src}
+              alt={hero.image.alt}
               className="
                 w-full
                 h-full
@@ -414,27 +427,29 @@ function LandingPage() {
                 aspect-[4/5]
               "
             />
+
+            {/* <Container image="./profileImage.png" /> */}
           </div>
 
           {/* Small Image Label */}
           <div
             className="
               absolute
-              -bottom-4
-              left-6
-              px-5
-              py-2
+              -bottom-3 sm:-bottom-4
+              left-4 sm:left-6
+              px-3.5 sm:px-5
+              py-1.5 sm:py-2
               bg-zinc-900
               border
               border-zinc-700
               rounded-full
-              text-xs
+              text-[10px] sm:text-xs
               uppercase
               tracking-widest
               text-zinc-400
             "
           >
-            Software Developer
+            {hero.image.label}
           </div>
         </motion.div>
       </div>
@@ -450,40 +465,26 @@ function LandingPage() {
           md:items-center
           border-t-2
           border-zinc-700
-          mt-16
-          lg:mt-20
-          gap-6
+          mt-12 sm:mt-16 lg:mt-20
+          gap-4 sm:gap-6
           py-5
           px-5
           sm:px-10
-          md:px-20
+          lg:px-20
         "
       >
         {/* Left */}
         <div className="flex flex-col gap-2 text-center md:text-left">
-          <p
-            className="
-              text-sm
-              md:text-base
-              font-light
-              tracking-tight
-              text-zinc-400
-            "
-          >
-            Turning ideas into interactive experiences.
-          </p>
-
-          <p
-            className="
-              text-sm
-              md:text-base
-              font-light
-              tracking-tight
-              text-zinc-500
-            "
-          >
-            Building products where engineering meets creativity.
-          </p>
+          {hero.footerLines.map((line, index) => (
+            <p
+              key={line}
+              className={`text-sm md:text-base font-light tracking-tight ${
+                index === 0 ? "text-zinc-400" : "text-zinc-500"
+              }`}
+            >
+              {line}
+            </p>
+          ))}
         </div>
 
         {/* Links */}
@@ -518,7 +519,7 @@ function LandingPage() {
             text-zinc-500
           "
         >
-          Scroll
+          {hero.scrollLabel}
         </span>
 
         <motion.div

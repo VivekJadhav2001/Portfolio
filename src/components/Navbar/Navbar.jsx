@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { motion, AnimatePresence } from 'framer-motion'
+import portfolioData from '../../data/portfolioData'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,13 +13,7 @@ function Navbar() {
       isActive ? "text-orange-700" : "text-white"
     } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
 
-  const links = [
-    { to: "/", label: "Home" },
-    { to: "/about2", label: "About" },
-    { to: "/skills", label: "Skills" },
-    // { to: "/resume", label: "Resume" },
-    { to: "/projects", label: "Projects" },
-  ]
+  const links = portfolioData.navigation
 
   return (
     <motion.div
@@ -37,7 +32,7 @@ function Navbar() {
         whileTap={{ scale: 0.96 }}
         className="logo cursor-pointer text-2xl sm:text-3xl lg:text-4xl font-extrabold transition-all"
       >
-        <h3>JADHAV</h3>
+        <h3>{portfolioData.personal.logo}</h3>
       </motion.div>
 
       {/* Desktop links */}
@@ -83,7 +78,7 @@ function Navbar() {
         whileTap={{ scale: 0.85, rotate: isOpen ? -10 : 10 }}
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden text-3xl z-[1000]"
-        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-label={isOpen ? portfolioData.navAria.closeMenu : portfolioData.navAria.openMenu}
       >
         <AnimatePresence mode="wait" initial={false}>
           {isOpen ? (

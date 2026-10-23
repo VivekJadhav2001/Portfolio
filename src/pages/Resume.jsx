@@ -1,8 +1,8 @@
-import React from 'react'
+import portfolioData from '../data/portfolioData'
 
 function Resume() {
   return (
-    <div>Resume</div>
+    <div>{portfolioData.resumePage.heading}</div>
   )
 }
 
