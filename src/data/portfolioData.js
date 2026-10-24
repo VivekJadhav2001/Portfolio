@@ -368,12 +368,7 @@ export const portfolioData = {
       liveDemo: "Live Demo →",
       github: "GitHub ↗",
     },
-    ids: [
-      "ai-resume-builder",
-      "private-social-media-app",
-      "connexa",
-      "finance-dashboard",
-    ],
+    ids: ["code-alchemist", "resume-jd-matcher", "dev-arena"],
   },
 
   projectsPage: {

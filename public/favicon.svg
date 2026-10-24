@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Vivek Jadhav monogram">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A2A2E"/>
+      <stop offset="0.55" stop-color="#18181B"/>
+      <stop offset="1" stop-color="#0B0B0D"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="0.22" cy="0.12" r="0.9">
+      <stop offset="0" stop-color="#CDEA68" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#CDEA68" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#CDEA68" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="lime" x1="14" y1="17" x2="50" y2="49" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F1FFC0"/>
+      <stop offset="0.45" stop-color="#CDEA68"/>
+      <stop offset="1" stop-color="#9FC42F"/>
+    </linearGradient>
+
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.6"/>
+    </filter>
+  </defs>
+
+  <!-- Base -->
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <rect width="64" height="64" rx="16" fill="url(#halo)"/>
+  <rect width="64" height="34" rx="16" fill="url(#sheen)"/>
+
+  <!-- Inner rim -->
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="#CDEA68" stroke-opacity="0.22" stroke-width="1.4"/>
+
+  <!-- Monogram glow -->
+  <g filter="url(#softGlow)" opacity="0.5" fill="none" stroke="#CDEA68" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 18 L24 44 L35 18" stroke-width="6.5"/>
+    <path d="M46 18 L46 38 C46 43.4 41.4 46.4 37.2 44.6" stroke-width="6.5"/>
+  </g>
+
+  <!-- Monogram -->
+  <g fill="none" stroke="url(#lime)" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 18 L24 44 L35 18"/>
+    <path d="M46 18 L46 38 C46 43.4 41.4 46.4 37.2 44.6"/>
+  </g>
+
+  <!-- Accent spark -->
+  <g fill="#F1FFC0">
+    <circle cx="52" cy="12" r="1.4" opacity="0.9"/>
+    <path d="M52 8.4 L52.9 11.1 L55.6 12 L52.9 12.9 L52 15.6 L51.1 12.9 L48.4 12 L51.1 11.1 Z" opacity="0.85"/>
+  </g>
+</svg>
