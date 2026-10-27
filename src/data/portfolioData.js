@@ -127,7 +127,15 @@ const projects = [
     title: "Dev Arena",
     desc: "DevArena is a competitive developer platform that analyzes GitHub activity into a personalized Developer DNA and enables realtime 1v1 and royale coding battles with server-side scoring, XP, badges, leaderboards, public profiles, LeetCode insights, live spectating, and shareable developer recaps.",
     img: devArenaPreview,
-    tech: ["React", "Node.js", "MongoDB", "Razorpay", "Redux Toolkit","Three.js","Websockets"],
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Razorpay",
+      "Redux Toolkit",
+      "Three.js",
+      "Websockets",
+    ],
     link: "https://dev-arena-plum.vercel.app/",
     github: "",
     featured: true,
@@ -211,6 +219,8 @@ export const portfolioData = {
     { to: "/", label: "Home" },
     { to: "/about2", label: "About" },
     { to: "/skills", label: "Skills" },
+    { to: "/experience", label: "Experience" },
+    { to: "/education", label: "Education" },
     { to: "/projects", label: "Projects" },
   ],
 
@@ -251,11 +261,7 @@ export const portfolioData = {
   },
 
   marquee: {
-    words: [
-      "Web Developer",
-      "MERN Stack Developer",
-      "Full Stack Developer",
-    ],
+    words: ["Web Developer", "MERN Stack Developer", "Full Stack Developer"],
     separator: "★",
   },
 
@@ -472,8 +478,7 @@ export const portfolioData = {
       panelTitle: "Vivek — your guide 🧭",
       panelStatus: "Online & ready to show off",
       welcome: "Hey, it's me again! Pick a stop and I'll take you there.",
-      tourComplete:
-        "That's the whole tour! Vivek would love to hear from you.",
+      tourComplete: "That's the whole tour! Vivek would love to hear from you.",
       takeTour: "Take full tour",
       takingTour: "🚶 Taking you around…",
       replay: "Replay entry",
@@ -493,8 +498,94 @@ export const portfolioData = {
   // ---------------------------------------------------------------------------
   // Experience & education (add entries here when needed)
   // ---------------------------------------------------------------------------
-  experience: [],
-  education: [],
+  experiences: [
+    {
+      id: 1,
+      company: "AccioJob",
+      role: "MERN Full Stack Intern",
+      location: "Hyderabad, India",
+
+      currentlyWorking: true,
+
+      startDate: {
+        month: "July",
+        year: 2026,
+      },
+
+      endDate: null,
+
+      description:
+        "Working on the AccioJob Student Portal, developing and debugging frontend, backend, and API functionality.",
+
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Node.js",
+        "MongoDB",
+        "REST APIs",
+      ],
+
+      highlights: [
+        "Maintained and debugged the AccioJob Student Portal.",
+        "Resolved issues involving code templates, test scripts, dependencies, Node.js versions, and Cypress.",
+        "Developed REST APIs and reusable components.",
+        "Debugged frontend, backend, and API issues to improve platform reliability.",
+      ],
+    },
+
+    {
+      id: 2,
+      company: "MediaMint",
+      role: "Associate Developer",
+      location: "Hyderabad, India",
+
+      currentlyWorking: false,
+
+      startDate: {
+        month: "February",
+        year: 2024,
+      },
+
+      endDate: {
+        month: "December",
+        year: 2024,
+      },
+
+      description:
+        "Worked on digital advertising operations, campaign management, targeting, analytics, and web-based troubleshooting using Google Ad Manager and JavaScript.",
+
+      technologies: [
+        "JavaScript",
+        "DOM",
+        "Google Ad Manager 360",
+        "Browser DevTools",
+      ],
+
+      highlights: [
+        "Managed end-to-end digital ad campaigns using Google Ad Manager 360.",
+        "Configured audience targeting across age, gender, and geography.",
+        "Used an AI-powered insights tool for campaign performance analytics and reporting.",
+        "Troubleshot ad creatives, rendering, and delivery issues using JavaScript, DOM, and browser debugging tools.",
+      ],
+    },
+  ],
+  education: [
+    {
+      id: 1,
+      institution: "TKR College of Engineering & Technology",
+      degree: "B.Tech",
+      field: "Mechanical Engineering",
+      location: "Hyderabad, India",
+
+      startYear: 2019,
+      endYear: 2023,
+
+      grade: {
+        value: "7.6",
+        type: "CGPA",
+      },
+    },
+  ],
 };
 
 export default portfolioData;

@@ -11,6 +11,8 @@ import About2 from './components/About2/About2.jsx';
 import Skills from './pages/Skills.jsx'
 import Project from './pages/Projects.jsx'
 import Resume from './pages/Resume.jsx'
+import Experience from './pages/Experience.jsx'
+import Education from './pages/Education.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>}/>
       <Route path='about2' element={<About2/>}/>
       <Route path='skills' element={<Skills/>}/>
+      <Route path='experience' element={<Experience/>}/>
+      <Route path='education' element={<Education/>}/>
       <Route path='resume' element={<Resume/>} />
       <Route path='projects' element={<Project/>} />
     </Route>
